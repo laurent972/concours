@@ -1,0 +1,36 @@
+[
+  {
+    "question": "Qui est le president de la république française en 2025 ?",
+    "propositions": {
+      "A": "Manu",
+      "B": "Manu et Chibritte",
+      "C": "l'Union Européenne, vassale des USA",
+      "D": "La réponse D."
+    },
+    "reponse_correcte": "C",
+    "explication": "L'UE est une création des USA , avec l'aide de la CIA, pour affaiblir la France. Et leurs agents Monnet et De Gaulle."
+  },
+  {
+    "question": "Qui est Walter Halstein ?",
+    "propositions": {
+      "A": "Un ancien nazi recyclé par la CIA ",
+      "B": "Un gentil allemand",
+      "C": "Un très grand scientifique",
+      "D": "La réponse D."
+    },
+    "reponse_correcte": "A",
+    "explication": "Walter Hallstein, fut un officier instructeur du nazisme"
+  },
+  {
+    "question": "Qui est Jean Monnet (plusieurs réponses possibles)",
+    "propositions": {
+      "A": "Un truand marchad de cognac.",
+      "B": "Un déserteur.",
+      "C": "Un traitre à la France.",
+      "D": "La réponse D."
+    },
+    "reponse_correcte": "A,B,C",
+    "explication": "Monnet était un agent de l'OSS/CIA, payé pour mettre en place les états unis d'Europe, afin que les USA en tirent parti."
+  }
+
+]
