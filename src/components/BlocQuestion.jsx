@@ -19,6 +19,8 @@ export default function BlocQuestion({...props}) {
         
         setGoodAnswerState(true);
          console.log(goodAnswerState);
+    }else { 
+      setGoodAnswerState(false);
     }
       
   };
@@ -34,7 +36,7 @@ export default function BlocQuestion({...props}) {
                <div key={id} className='flex gap-2'>
                     <input id={key[0] + key[1]}  className="hidden peer" type="radio" name='reponse' value={key[0]} onChange={e => setAnswer(e.target.value)} required/>
                     <label htmlFor={key[0] + key[1]}  
-                        className={`inline-flex items-center justify-between w-full p-5 text-gray-500 bg-white border border-gray-200 rounded-lg cursor-pointer  peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100  ${goodAnswerState  && "peer-checked:text-green-600 peer-checked:border-green-600"}` }>
+                        className={`inline-flex items-center justify-between w-full p-5 text-gray-500 bg-white border border-gray-200 rounded-lg cursor-pointer  peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100  ${goodAnswerState  && "peer-checked:text-green-600 peer-checked:border-green-600"} ${goodAnswerState === false  && "peer-checked:text-red-600 peer-checked:border-red-600"}` }>
                        <p className="block">
                         {key[1]}
                         </p>
