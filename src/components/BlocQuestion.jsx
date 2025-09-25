@@ -7,7 +7,7 @@ export default function BlocQuestion({...props}) {
     const array = Object.entries(props.propositions);
     const [answer, setAnswer] = useState("");
     const [answered, setAnswered] = useState(false);
-    const [goodAnswerState, setGoodAnswerState] = useState(false);
+    const [goodAnswerState, setGoodAnswerState] = useState(null);
 
     const handleSubmit = (e) => {
     e.preventDefault();
@@ -33,7 +33,8 @@ export default function BlocQuestion({...props}) {
             {array.map((key,id) => (
                <div key={id} className='flex gap-2'>
                     <input id={key[0] + key[1]}  className="hidden peer" type="radio" name='reponse' value={key[0]} onChange={e => setAnswer(e.target.value)} required/>
-                    <label htmlFor={key[0] + key[1]}  className="inline-flex items-center justify-between w-full p-5 text-gray-500 bg-white border border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 dark:peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700" >
+                    <label htmlFor={key[0] + key[1]}  
+                        className={`inline-flex items-center justify-between w-full p-5 text-gray-500 bg-white border border-gray-200 rounded-lg cursor-pointer  peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100  ${goodAnswerState  && "peer-checked:text-green-600 peer-checked:border-green-600"}` }>
                        <p className="block">
                         {key[1]}
                         </p>
