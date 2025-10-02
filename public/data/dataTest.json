@@ -7,7 +7,7 @@
       "C": "l'Union Européenne, vassale des USA",
       "D": "La réponse D 1."
     },
-    "reponse_correcte": "C",
+    "reponse_correcte": ["C"],
     "explication": "L'UE est une création des USA , avec l'aide de la CIA, pour affaiblir la France. Et leurs agents Monnet et De Gaulle."
   },
   {
@@ -18,7 +18,7 @@
       "C": "Un très grand scientifique",
       "D": "La réponse D 2."
     },
-    "reponse_correcte": "A",
+    "reponse_correcte": ["A"],
     "explication": "Walter Hallstein, fut un officier instructeur du nazisme"
   },
   {
@@ -29,7 +29,7 @@
       "C": "Un traitre à la France.",
       "D": "La réponse D 3."
     },
-    "reponse_correcte": "A,B,C",
+    "reponse_correcte": ["A","B","C"],
     "explication": "Monnet était un agent de l'OSS/CIA, payé pour mettre en place les états unis d'Europe, afin que les USA en tirent parti."
   }
 
