@@ -1,5 +1,5 @@
 import { scoreContext } from '@/app/context/score';
-import React, { createRef, useContext, useRef, useState } from 'react'
+import React, { useContext, useState } from 'react'
 
 export default function BlocQuestion( {...props }) {
     //console.log(props);
@@ -13,9 +13,6 @@ export default function BlocQuestion( {...props }) {
     const [goodAnswerState, setGoodAnswerState] = useState(null);
     const [message, setMessage] = useState("");
     const {score, setScore} = useContext(scoreContext);
-    const idRef = useRef();
-    
-  console.log(idRef);
   
 
     const handleSubmit = (e) => {
@@ -45,7 +42,7 @@ export default function BlocQuestion( {...props }) {
 
   return (
     <>
-      <div ref={idRef} id={id} className="bloc-question py-50 flex flex-col">
+      <div id={id} className="bloc-question py-50 flex flex-col">
         <h2 className='text-2xl font-bold text-gray-700 pb-2'>{question}</h2>
         <form id={question} onSubmit={handleSubmit}>
           {
@@ -74,16 +71,19 @@ export default function BlocQuestion( {...props }) {
               Valider
             </button>
           </form>
-           <div className={`mt-2 block bg-blue-50 p-6 border border-solid border-blue-100 w-full ${ answered ? 'block' : 'hidden'}`}> 
+           <div className={`mt-2 block bg-blue-50 p-6 border border-solid border-blue-100 w-full text-left ${ answered ? 'block' : 'hidden'}`}> 
             <p className='font-bold text-2xl'>{message}</p>
             <p>Réponse(s): {goodAnswer} </p>
             <strong>Explication :</strong> {props.explication}
           </div> 
-            <button onClick={() => {
+            <button 
+            onClick={() => {
               const nextId = document.getElementById(id+1)
               nextId.scrollIntoView({behavior:"smooth"})
-            }}>NEXT</button>
-            <a href={`#${id+1}`}>TOTOT</a>
+            }}
+            className={`border border-gray-400 text-gray-400 px-4 py-2 mt-4 cursor-pointer w-[100px] mx-auto ${ answered ? 'block' : 'hidden'}`}
+            >NEXT</button>
+            
           
       </div>  
      
