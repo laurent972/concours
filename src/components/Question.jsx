@@ -1,7 +1,10 @@
 import { scoreContext } from '@/app/context/score';
-import React, { useContext, useState } from 'react'
+import React, { use, useContext, useEffect, useLayoutEffect, useState } from 'react'
 
-export default function BlocQuestion( {...props }) {
+export default function Question( {...props} ) {
+
+  console.log(props);
+  
    
     const question = props.question;
     const id = props.id;
@@ -12,13 +15,16 @@ export default function BlocQuestion( {...props }) {
     const [goodAnswerState, setGoodAnswerState] = useState(null);
     const [message, setMessage] = useState("");
     const {score, setScore} = useContext(scoreContext);
+
+    const [clear, setClear] = useState(props.clear);
     
+   
 
     const handleSubmit = (e) => {
     e.preventDefault();
     if(!answered){
         answer.every((ans) => {
-          if (goodAnswer.includes(ans) && answer.length === goodAnswer.length) {
+          if (goodAnswer.includes(ans) && answer.length === goodAnswer.length ) {
             setAnswered(true);
             setMessage("Bonne réponse !");
             setScore(score + 1);
