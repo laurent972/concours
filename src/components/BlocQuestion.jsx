@@ -13,6 +13,7 @@ export default function BlocQuestion( {...props }) {
     const [goodAnswerState, setGoodAnswerState] = useState(null);
     const [message, setMessage] = useState("");
     const {score, setScore} = useContext(scoreContext);
+    const [displayNext, setDisplayNext] = useState(false);
   
 
     const handleSubmit = (e) => {
@@ -42,7 +43,7 @@ export default function BlocQuestion( {...props }) {
 
   return (
     <>
-      <div id={id} className="bloc-question py-50 flex flex-col">
+      <div id={id} className={`bloc-question flex flex-col `}>
         <h2 className='text-2xl font-bold text-gray-700 pb-2'>{question}</h2>
         <form id={question} onSubmit={handleSubmit}>
           {
@@ -78,8 +79,9 @@ export default function BlocQuestion( {...props }) {
           </div> 
             <button 
             onClick={() => {
-              const nextId = document.getElementById(id+1)
-              nextId.scrollIntoView({behavior:"smooth"})
+              const nextId = document.getElementById(id+1);
+              nextId.scrollIntoView({behavior:"smooth"});
+              setDisplayNext(true);
             }}
             className={`border border-gray-400 text-gray-400 px-4 py-2 mt-4 cursor-pointer w-[100px] mx-auto ${ answered ? 'block' : 'hidden'}`}
             >NEXT</button>
