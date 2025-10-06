@@ -1,4 +1,15 @@
 [
+   {
+    "question": "Qui est Jean Monnet (plusieurs réponses possibles)",
+    "propositions": {
+      "A": "Un truand marchad de cognac.",
+      "B": "Un déserteur.",
+      "C": "Un traitre à la France.",
+      "D": "La réponse D 3."
+    },
+    "reponse_correcte": ["A","B","C"],
+    "explication": "Monnet était un agent de l'OSS/CIA, payé pour mettre en place les états unis d'Europe, afin que les USA en tirent parti."
+  },
   {
     "question": "Qui est le president de la république française en 2025 ?",
     "propositions": {
@@ -20,17 +31,5 @@
     },
     "reponse_correcte": ["A"],
     "explication": "Walter Hallstein, fut un officier instructeur du nazisme"
-  },
-  {
-    "question": "Qui est Jean Monnet (plusieurs réponses possibles)",
-    "propositions": {
-      "A": "Un truand marchad de cognac.",
-      "B": "Un déserteur.",
-      "C": "Un traitre à la France.",
-      "D": "La réponse D 3."
-    },
-    "reponse_correcte": ["A","B","C"],
-    "explication": "Monnet était un agent de l'OSS/CIA, payé pour mettre en place les états unis d'Europe, afin que les USA en tirent parti."
   }
-
 ]
