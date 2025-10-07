@@ -1,10 +1,10 @@
 import React from 'react'
+import { ScoreProvider } from '../context/score'
 
 export default function layout({ children }) {
   return (
     <div>
-        layout
-   { children }
+       <ScoreProvider>{children}</ScoreProvider>
     </div>
   )
 }
