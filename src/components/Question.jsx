@@ -1,9 +1,10 @@
 import { scoreContext } from '@/app/context/score';
+import Link from 'next/link';
 import React, { useContext, useState } from 'react'
 
 export default function Question( {...props }) {
     console.log(props);
-    
+   
     const question = props.question;
     const id = props.id;
     const goodAnswer = props.reponse_correcte;
@@ -13,7 +14,7 @@ export default function Question( {...props }) {
     const [goodAnswerState, setGoodAnswerState] = useState(null);
     const [message, setMessage] = useState("");
     const {score, setScore} = useContext(scoreContext);
-    const [displayNext, setDisplayNext] = useState(false);
+     const nextQuestionId = parseInt(id)+1;
   
 
     const handleSubmit = (e) => {
@@ -72,19 +73,19 @@ export default function Question( {...props }) {
               Valider
             </button>
           </form>
-           <div className={`mt-2 block bg-blue-50 p-6 border border-solid border-blue-100 w-full text-left ${ answered ? 'block' : 'hidden'}`}> 
+           <div className={`mt-2 block bg-blue-50 p-6 border border-solid border-blue-100 w-full text-left opacity-0  ${ answered ? 'block opacity-100' : 'hidden'}`}> 
             <p className='font-bold text-2xl'>{message}</p>
             <p>Réponse(s): {goodAnswer} </p>
             <strong>Explication :</strong> {props.explication}
           </div> 
-            <button 
-            onClick={() => {
-              const nextId = document.getElementById(id+1);
-              nextId.scrollIntoView({behavior:"smooth"});
-              setDisplayNext(true);
-            }}
-            className={`border border-gray-400 text-gray-400 px-4 py-2 mt-4 cursor-pointer w-[100px] mx-auto ${ answered ? 'block' : 'hidden'}`}
-            >NEXT</button>
+           
+
+            <Link
+              className={`border border-gray-400 text-gray-400 px-4 py-2 mt-4 cursor-pointer w-[100px] mx-auto ${ answered ? 'block' : 'hidden'}`}
+              href={`/question/${nextQuestionId}`}
+            >
+              GOOOO !
+            </Link>
             
           
       </div>  

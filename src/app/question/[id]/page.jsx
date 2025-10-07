@@ -33,30 +33,25 @@ useEffect(() => {
 
 }, [id]);
 
-    console.log(question);
+
 
   return (
     <div>
         {question ?
        
-          <>
+          <div className="container mx-auto p-5 h-[80vh] overflow-hidden">
             <h1 className="text-4xl font-bold text-center sm:text-left">
               Question à choix - {data.length} questions. Score : {score} /{" "}
               {data.length}
             </h1>
             <Question  {...question} />
-         </>
+         </div>
        
         : <Loading /> 
         
         }
 
-        <Link
-          className="p-6 border border-solid border-amber-600"
-          href={`/question/${nextQuestionId}`}
-        >
-          GOOOO !
-        </Link>
+
     </div>
   )
 }
