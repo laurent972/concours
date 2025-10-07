@@ -1,5 +1,6 @@
 [
   {
+    "id": 1,
     "question": "Qui est le president de la république française en 2025 ?",
     "propositions": {
       "A": "Manu",
@@ -11,6 +12,7 @@
     "explication": "L'UE est une création des USA , avec l'aide de la CIA, pour affaiblir la France. Et leurs agents Monnet et De Gaulle."
   },
   {
+    "id": 2,
     "question": "Qui est Walter Halstein ?",
     "propositions": {
       "A": "Un ancien nazi recyclé par la CIA ",
@@ -22,6 +24,7 @@
     "explication": "Walter Hallstein, fut un officier instructeur du nazisme"
   },
   {
+    "id": 3,
     "question": "Qui est Jean Monnet (plusieurs réponses possibles)",
     "propositions": {
       "A": "Un truand marchad de cognac.",
